@@ -1,30 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Webhook Trigger</title>
+  <title>Sasta African Eastern</title>
 </head>
 <body>
-    <h2>Sasta African Eastern</h2>
-    <button onclick="triggerWebhook()">Send Webhook</button>
-
-    <script>
-        function triggerWebhook() {
-            fetch('https://rest.jeeblynow.com/api/v1/integrations/african_eastern_webhook?Status=DELIVERED&Payment=PAID+ONLINE&POD=aHR0cHM6Ly9wcmVsaXZlLmFmcmljYW5lYXN0ZXJub25saW5lLmNvbS9tZWRpYS9kb2NzLzUxMDAwMDAxNjEyLnBkZg%3D%3D&comment=testing&Id=98148976768678768678gjghggj', {
-                method: 'GET',
-                headers: {
-                    'access-key': 'abff75458a1d8fb2ae11ef8970ea66f7',
-                    'secret-key': 'zbjn3YvxAbB3es6mJkrQifS86jfZ572wSMApiS13ToPIcwkDLUk+2NPWHGX4/o3xSxvKQEClkJRIgnrATSpz2g=='
-                }
-            })
-            .then(response => response.json())
-            .then(data => {
-                alert("Webhook sent successfully! Response: " + JSON.stringify(data));
-            })
-            .catch(error => {
-                alert("Error sending webhook: " + error);
-            });
-        }
-    </script>
+  <h2>Sasta African Eastern</h2>
+  <form id="webhookForm" action="https://resttest.jeeblynow.com/api/v1/orders/get_batch_order" method="GET" target="_blank">
+    <input type="hidden" name="store_id" value="04ccd76a-8958-4e5c-a5ac-7ed8922a53d5">
+    <button type="submit">Send Webhook</button>
+  </form>
 </body>
 </html>
